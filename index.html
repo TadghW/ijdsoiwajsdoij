@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Ops | Capture Operators Interface</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> -->
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <body>
+    <div id="banner">
+      <h1>Data Ops | Capture Operators Interface</h1>
+    </div>
+
+    <div class="container">
+      <div id="create-panel">
+        <h3>Submit A New Capture Plan</h3>
+        <div id="submit-inputs">
+          <div class="input-section">
+            <p><i>Mandatory Fields</i></p>
+            <div>
+            <label for="project">Plan Project:</label>
+            <select id="project" name="project">
+              <option value="VW" selected>VW</option>
+              <option value="STLA_MY24">STLA_MY24</option>
+              <option value="UCAP">UCAP</option>
+
+            </select>
+          </div>
+          <div>
+            <label for="algorithm">Plan Algorithm:</label>
+            <select id="algorithm" name="algorithm">
+              <option value="APNHPC">APNHPC</option>
+              <option value="APNKEYPOINTS">APNKEYPOINTS</option>
+              <option value="APNPPC">APNPPC</option>
+              <option value="APNUPC">APNUPC</option>
+              <option value="CSD" selected>CSD</option>
+              <option value="EVD">EVD</option>
+              <option value="EVLD">EVLD</option>
+              <option value="HCL">HCL</option>
+              <option value="LD">LD</option>
+              <option value="MTC">MTC</option>
+              <option value="NFORM">NFORM</option>
+              <option value="PMD">PMD</option>
+              <option value="PSMD">PSMD</option>
+              <option value="SAWDL">SAWDL</option>
+              <option value="TBL">TBL</option>
+              <option value="TTT">TTT</option>
+            </select>
+          </div>
+          <div>
+            <label for="name">Plan Name:</label>
+            <input type="text" id="name" name="name">
+          </div>
+          <div>
+            <label for="new-captures">To Capture:</label>
+            <input type="number" id="new-captures" name="new-captures" step="1">
+          </div>
+          <div>
+            <label for="to-process">To Process:</label>
+            <input type="number" id="to-process" name="to-process" step="1">
+          </div>
+        </div>
+        <div class="input-section">
+          <p><i>Optional Fields</i></p>
+          <div>
+            <label for="annotation">Annot. Team:</label>
+            <input type="text" id="annotation" name="annotation">
+          </div>
+          <div>
+            <label for="received">Received:</label>
+            <input type="number" id="received" name="received" step="1">
+          </div>
+          <div>
+            <label for="captured">Captured:</label>
+            <input type="number" id="captured" name="captured" step="1">
+          </div>
+          <div>
+            <label for="uploaded">Uploaded:</label>
+            <input type="number" id="uploaded" name="uploaded" step="1">
+          </div>
+          <div>
+            <label for="ticket">Ticket URL:</label>
+            <input type="url" id="ticket" name="ticket">
+          </div>
+
+        </div>
+        <div class="input-section">
+
+          <div>
+            <button type="submit" id="capture-plan-submit">Submit Plan</button>
+          </div> 
+        </div>
+       
+        </div>
+        </div>
+
+      
+      <div id="edit-panel"></div>
+      
+      <div id="delete-panel"></div>
+
+      <div class="options">
+        <h3>Configure Interface</h3>
+        <div class="inputs">
+          <div class="input-group">
+            <label for="search">Search For:</label>
+            <input type="text" id="search" name="search">
+          </div>
+        </div>
+
+        <div class="inputs">
+          <div class="input-group">
+            <label for="group-by">Group By:</label>
+            <select id="group-by">
+              <option value="ungrouped">Ungrouped</option>
+              <option value="project" selected>Project</option>
+              <option value="algorithm">Algorithm</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="order-by">Sort By:</label>
+            <select id="order-by">
+              <option value="most-recent" selected>Most Recent</option>
+              <option value="highest-throughput">Highest Throughput</option>
+              <option value="highest-failure">Highest Failure</option>
+              <option value="time-elapsed">Time Elapsed</option>
+              <option value="annotation-supplier">Annotation Supplier</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="inputs">
+          <div class="input-group">
+            <label for="max-playlists">Show Top:</label>
+            <input type="number" id="max-playlists" name="max-playlists" min="3" max="25" value="12">
+          </div>
+          <div class="input-group">
+            <label for="from-date">Submitted between:</label>
+            <input type="date" id="from-date" name="from-date" value="2022-08-01">
+            <label for="to-date">and:</label>
+            <input type="date" id="to-date" name="to-date" value="2023-10-03">
+          </div>
+          <div class="input-group">   
+            <button type="submit">Reset</button>
+            <button type="submit">Search</button>
+          </div>
+        </div>
+      </div> 
+
+    <div id="interaction-space">
+
+      <div id="level-1-dashboard"></div>
+    
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="examplePayload.js"></script>
+    <script src="networking.js"></script>
+    <script src="processing.js"></script>
+    <script src="sort.js"></script>
+    <script src="visualisation.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

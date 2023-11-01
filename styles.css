@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+#banner {
+  height: 70px;
+  /*background-color: black;*/
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+
+#banner h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin: 10px 0 0 0;
+}
+
+td a {
+  color:rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+}
+
+#navbar a.selected {
+  background-color: #ddd;
+}
+
+#batch-inputs {
+  text-align: left;
+  margin-top: 10px;
+}
+
+#batch-inputs label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#batch-inputs input {
+  width: 200px;
+  padding: 5px;
+}
+
+.visualisations {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+img {
+  width: 85%;
+  height: auto;
+  margin-top: 10px;
+}
+
+img.pie {
+  margin-top: 0px;
+  width: 21%;
+  height: auto;
+}
+
+.container {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #000;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+th, td {
+  text-align: left;
+  border: 1px solid #000;
+  padding: 8px;
+  font-weight: normal;
+  line-height: 25px;
+}
+
+th {
+  padding: 10px
+}
+
+tr:first-child th {
+  border-left: none;  /* Remove left border for the first th */
+  border-right: none; /* Remove right border for the last th */
+}
+
+tr:nth-child(2) th {
+  font-weight: bold;
+  text-align: center;
+}
+
+tr:first-child th:nth-child(4), tr:first-child th:nth-child(8), tr:first-child th:nth-child(13) {
+  border-left: 0px solid #000;
+}
+
+tr:first-child th:nth-child(17) {
+  border-left: 1px solid #000;
+}
+
+th:nth-child(4), td:nth-child(4), td:nth-child(8), th:nth-child(8), th:nth-child(13), td:nth-of-type(13), td:nth-of-type(17) {
+  border-left: 1px solid #000
+}
+
+tr:nth-child(even) {
+  background-color: rgb(235, 235, 235);
+}
+
+.table {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+.key-stats {
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.key-stats span {
+  margin-right: 20px;
+}
+
+h4 {
+  margin-bottom: 5px;
+}
+
+.square {
+  min-height: 20px;
+  min-width: 20px;
+  display: inline-block;
+  margin: 5px;
+  outline: 1px solid #000;
+  margin-left: 10px;
+}
+
+.green {
+  background: rgb(0, 222, 0)
+}
+
+.yellow {
+  background: yellow
+}
+
+.grey {
+  background: rgb(163, 163, 251);
+}
+
+.amber {
+  background: #FFBF00;
+}
+
+.red {
+  background: red;
+}
+
+.blue {
+  background: rgb(182, 182, 252);
+}
+
+.aqm {
+  background: rgb(255, 237, 136);
+}
+
+.legend > *{
+  vertical-align: middle;
+}
+.legend {
+  padding: 10px;
+}
+
+
+.divide > *{
+  background: rgb(57, 57, 57);
+  color: #fff;
+  max-height: 20px;
+  padding: 3px 0px 3px 5px;
+  border: none !important;
+}
+
+.divide > th:last-child {
+  border-right: 1px solid #000;
+}
+
+.input-group {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.options, #create-panel {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(235, 235, 235);
+  width: 80vw;
+  border: 1px solid rgb(164, 164, 164);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+#create-panel>h3, .options>h3 {
+  padding-bottom: 20px;
+}
+
+.inputs, #create-panel, .options {
+  padding: 7px 0px 5px 10px;
+}
+
+.inputs:last-of-type {
+  padding-bottom: 15px;
+}
+
+.input-buttons {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+h3 {
+  margin-bottom: -10px;
+}
+
+h4 {
+  padding: 10px 0px 0px 10px;
+}
+
+span.green, span.aqm, span.yellow, span.amber, span.red {
+  font-size: 10px;
+}
+
+button {
+  padding: 3px 6px 3px 6px;
+}
+
+
+#interaction-space>* {
+  margin: 10px 0 10px 10px;
+}
+
+.table>table:nth-child(2)>tbody>tr>td:nth-child(4), .table>table:nth-child(3)>tbody>tr>td, .table>table:nth-child(4)>tbody>tr>td, .table>table:nth-child(5)>tbody>tr>td:nth-child(1), .table>table:nth-child(5)>tbody>tr>td:nth-child(3), .table>table:nth-child(5)>tbody>tr>td:nth-child(4){
+  opacity: 0.4;
+}
+
+#create-panel {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#create-panel>*, .options>*{
+  padding: 5px 0;
+}
+
+#submit-inputs {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.input-section {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.input-section>* {
+margin: 5px;
+}
+
+.input-section:last-child{
+  justify-content: end;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  padding-right: 10px;
+}
